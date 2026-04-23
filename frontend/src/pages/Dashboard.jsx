@@ -11,7 +11,7 @@ const Dashboard = () => {
 
     const fetchExpenses = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/expenses');
+            const res = await axios.get('https://auth-db-wsbe.onrender.com/api/expenses');
             setExpenses(res.data);
             setFilteredExpenses(res.data);
         } catch (err) {
@@ -54,8 +54,8 @@ const Dashboard = () => {
                 </div>
                 <div className="glass-card" style={{ padding: '1.5rem' }}>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Filter by Category</p>
-                    <select 
-                        value={categoryFilter} 
+                    <select
+                        value={categoryFilter}
                         onChange={(e) => setCategoryFilter(e.target.value)}
                         style={{ width: '100%', marginTop: '0.5rem', padding: '0.5rem', background: 'var(--bg-card)', border: '1px solid var(--border)', color: 'white', borderRadius: '8px' }}
                     >

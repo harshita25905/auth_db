@@ -15,7 +15,7 @@ const ExpenseForm = ({ onExpenseAdded }) => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/api/expenses', formData);
+            await axios.post('https://auth-db-wsbe.onrender.com/api/expenses', formData);
             setFormData({ title: '', amount: '', category: 'Food', date: new Date().toISOString().split('T')[0] });
             onExpenseAdded();
         } catch (err) {
