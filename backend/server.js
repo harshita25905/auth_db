@@ -13,7 +13,7 @@ app.use(cors());
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
-app.use('/api/expenses', require('./routes/expenses'));
+app.use('/api/auth/expenses', require('./routes/expenses'));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
